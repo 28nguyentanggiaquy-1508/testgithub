@@ -1,4 +1,4 @@
-package com.chuvannam.tests;
+package com.nguyentanggiaquy.tests;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.chuvannam.pages.LoginPage;
+import com.nguyentanggiaquy.pages.LoginPage;
 
 public class LoginTest {
 
@@ -61,7 +61,7 @@ public class LoginTest {
         loginPage.clickLogin();
 
         // Cố tình fail
-        Assert.assertTrue(
+        Assert.assertFalse(
                 loginPage.isLoginSuccessful(),
                 "Intentional fail test!");
     }
